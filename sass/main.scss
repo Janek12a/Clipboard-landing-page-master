@@ -1,0 +1,271 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0 1em;
+	font-size: 1.8rem;
+	font-family: 'Bai Jamjuree', sans-serif;
+	background-image: url(../images/bg-header-mobile.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	object-fit: cover;
+	object-position: center;
+}
+
+// Universal styles
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	margin: 1em;
+	padding-top: 1.5em;
+	color: $dark-grayish;
+}
+
+.text {
+	margin-bottom: 1.5em;
+	color: $grayish-blue;
+}
+
+// ---------------------------------------
+
+.general-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	&__img {
+		padding: 1.5em 0;
+	}
+
+	&__btn {
+		@include buttons;
+	}
+}
+
+.track {
+	margin: 0 0.5em;
+	text-align: center;
+
+	&__img {
+		width: 80vw;
+		padding: 1em 0;
+	}
+
+	&__option-title {
+		padding: 0.5em 1em;
+		color: $dark-grayish;
+	}
+
+	&__option-text {
+		padding: 0.5em 1em;
+		color: $grayish-blue;
+	}
+}
+
+.clipboard {
+	text-align: center;
+
+	&__img {
+		width: 80vw;
+		padding: 1em 0;
+	}
+}
+
+.supercharge {
+	text-align: center;
+
+	&__boxes {
+		padding: 2em;
+	}
+
+	&__box {
+		margin-bottom: 4em;
+	}
+}
+
+.partners {
+	text-align: center;
+
+	&__logo {
+		padding: 2em;
+	}
+}
+
+.ios-mac {
+	text-align: center;
+	padding: 2em 0;
+
+	&__btn {
+		@include buttons;
+	}
+}
+
+.footer {
+	width: 100%;
+	background-color: $fotterColor;
+
+	img {
+		scale: 0.55;
+	}
+
+	&__list {
+		text-align: center;
+		list-style: none;
+	}
+
+	&__pharagraf {
+		transition: color 0.3s;
+
+		&:hover {
+			color: $cyan;
+			cursor: pointer;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-bottom: 2em;
+		color: $dark-grayish;
+	}
+
+	.fa-brands {
+		padding: 0 1em;
+		font-weight: bold;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $cyan;
+			cursor: pointer;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+
+@media (min-width: 996px) {
+	body {
+		background-image: url(../images/bg-header-desktop.png);
+		object-fit: cover;
+		object-position: center;
+		background-size: auto;
+	}
+
+	.general-info {
+		&__btn {
+			width: 60%;
+			flex-direction: row;
+			padding: 1em 4em;
+			margin: 1em;
+		}
+	}
+
+	.track {
+		&__options {
+			display: flex;
+			flex-direction: row;
+			height: 90vh;
+		}
+		&__img {
+			position: absolute;
+			left: -30px;
+			width: 50%;
+		}
+
+		&__option-boxes {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			width: 30%;
+			padding-top: 2.5em;
+			margin-left: 3em;
+		}
+
+		&__option-box {
+			text-align: left;
+			padding: 1em;
+		}
+	}
+
+	.clipboard {
+		&__text {
+			width: 50%;
+		}
+
+		&__img {
+			width: 60%;
+		}
+	}
+
+	.supercharge {
+		&__boxes {
+			display: flex;
+			flex-direction: row;
+		}
+
+		&__box {
+			padding: 2em;
+			margin-bottom: 1em;
+		}
+	}
+
+	.partners {
+		display: flex;
+		flex-direction: row;
+		margin: 0 2em;
+
+		&__logo {
+			padding: 0.5em 2em;
+		}
+	}
+
+	.ios-mac {
+		&__btn {
+			flex-direction: row;
+			width: 60%;
+			margin: 1em;
+		}
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+
+		&__list {
+			display: flex;
+			flex-direction: row;
+			align-content: start;
+			text-align: left;
+			margin-top: 1em;
+		}
+		&__list-component {
+			padding: 2em;
+		}
+
+		&__icons {
+			padding-bottom: 0;
+			font-size: 2.5rem;
+		}
+	}
+}

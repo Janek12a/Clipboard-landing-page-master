@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 1em;
+  font-size: 1.8rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  background-image: url(../images/bg-header-mobile.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 1em;
+  padding-top: 1.5em;
+  color: hsl(210, 10%, 33%);
+}
+
+.text {
+  margin-bottom: 1.5em;
+  color: hsl(201, 11%, 66%);
+}
+
+.general-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.general-info__img {
+  padding: 1.5em 0;
+}
+.general-info__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 1em 2em;
+  margin: 1em auto;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+}
+.general-info__btn:hover {
+  cursor: pointer;
+}
+.general-info__btn--ios {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0px 25px 20px -19px hsl(171, 66%, 44%);
+  transition: background-color 0.3s;
+}
+.general-info__btn--ios:hover {
+  background-color: hsl(171, 61%, 47%);
+}
+.general-info__btn--mac {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0px 25px 20px -19px hsl(233, 100%, 69%);
+  transition: background-color 0.3s;
+}
+.general-info__btn--mac:hover {
+  background-color: hsl(233, 97%, 74%);
+}
+
+.track {
+  margin: 0 0.5em;
+  text-align: center;
+}
+.track__img {
+  width: 80vw;
+  padding: 1em 0;
+}
+.track__option-title {
+  padding: 0.5em 1em;
+  color: hsl(210, 10%, 33%);
+}
+.track__option-text {
+  padding: 0.5em 1em;
+  color: hsl(201, 11%, 66%);
+}
+
+.clipboard {
+  text-align: center;
+}
+.clipboard__img {
+  width: 80vw;
+  padding: 1em 0;
+}
+
+.supercharge {
+  text-align: center;
+}
+.supercharge__boxes {
+  padding: 2em;
+}
+.supercharge__box {
+  margin-bottom: 4em;
+}
+
+.partners {
+  text-align: center;
+}
+.partners__logo {
+  padding: 2em;
+}
+
+.ios-mac {
+  text-align: center;
+  padding: 2em 0;
+}
+.ios-mac__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 1em 2em;
+  margin: 1em auto;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+}
+.ios-mac__btn:hover {
+  cursor: pointer;
+}
+.ios-mac__btn--ios {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0px 25px 20px -19px hsl(171, 66%, 44%);
+  transition: background-color 0.3s;
+}
+.ios-mac__btn--ios:hover {
+  background-color: hsl(171, 61%, 47%);
+}
+.ios-mac__btn--mac {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0px 25px 20px -19px hsl(233, 100%, 69%);
+  transition: background-color 0.3s;
+}
+.ios-mac__btn--mac:hover {
+  background-color: hsl(233, 97%, 74%);
+}
+
+.footer {
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+}
+.footer img {
+  scale: 0.55;
+}
+.footer__list {
+  text-align: center;
+  list-style: none;
+}
+.footer__pharagraf {
+  transition: color 0.3s;
+}
+.footer__pharagraf:hover {
+  color: hsl(171, 66%, 44%);
+  cursor: pointer;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+  color: hsl(210, 10%, 33%);
+}
+.footer .fa-brands {
+  padding: 0 1em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.footer .fa-brands:hover {
+  color: hsl(171, 66%, 44%);
+  cursor: pointer;
+}
+
+@media (min-width: 996px) {
+  body {
+    background-image: url(../images/bg-header-desktop.png);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    background-size: auto;
+  }
+  .general-info__btn {
+    width: 60%;
+    flex-direction: row;
+    padding: 1em 4em;
+    margin: 1em;
+  }
+  .track__options {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+  }
+  .track__img {
+    position: absolute;
+    left: -30px;
+    width: 50%;
+  }
+  .track__option-boxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-top: 2.5em;
+    margin-left: 3em;
+  }
+  .track__option-box {
+    text-align: left;
+    padding: 1em;
+  }
+  .clipboard__text {
+    width: 50%;
+  }
+  .clipboard__img {
+    width: 60%;
+  }
+  .supercharge__boxes {
+    display: flex;
+    flex-direction: row;
+  }
+  .supercharge__box {
+    padding: 2em;
+    margin-bottom: 1em;
+  }
+  .partners {
+    display: flex;
+    flex-direction: row;
+    margin: 0 2em;
+  }
+  .partners__logo {
+    padding: 0.5em 2em;
+  }
+  .ios-mac__btn {
+    flex-direction: row;
+    width: 60%;
+    margin: 1em;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+    text-align: left;
+    margin-top: 1em;
+  }
+  .footer__list-component {
+    padding: 2em;
+  }
+  .footer__icons {
+    padding-bottom: 0;
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */
